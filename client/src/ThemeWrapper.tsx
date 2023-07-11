@@ -1,31 +1,23 @@
-import React, { ReactNode } from 'react';
-import { ThemeProvider, Theme } from '@emotion/react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
-const theme: Theme = {
-  fontSizes: [12, 14, 16, 24, 32, 48, 64],
-  colors: {
-    primary: '#07c',
-    gray: '#f6f6ff',
-  },
-  buttons: {
-    primary: {
-      color: 'white',
-      bg: 'primary',
-    },
-    outline: {
-      color: 'primary',
-      bg: 'transparent',
-      boxShadow: 'inset 0 0 0 2px',
-    },
-  },
-};
-
-interface ThemeWrapperProps {
-  children: ReactNode;
+interface ToggleContentProps {
+  header: string;
+  content: JSX.Element;
 }
 
-const ThemeWrapper: React.FC<ThemeWrapperProps> = ({ children }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
+const ToggleContent: React.FC<ToggleContentProps> = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <motion.div
+      layout
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <motion.h2 layout></motion.h2>
+      {isOpen ? 'test' : null}
+    </motion.div>
+  );
+};
 
-export default ThemeWrapper;
+export default ToggleContent;
