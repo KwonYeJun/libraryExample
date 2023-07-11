@@ -11,7 +11,7 @@ const CustomCard: React.FC<CardProps> = ({ image, title, description }) => (
   <Box width={256}>
   <Card
     sx={{
-      p: 1,
+      p: 10, // 테두리 라고 생각 하면 될것 같다.
       borderRadius: 2,
       boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
     }}>
