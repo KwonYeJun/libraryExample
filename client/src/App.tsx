@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import {motion} from 'framer-motion'
 import './App.css';
-
+import CustomCard from './test';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <motion.div
+        animate={{ rotate: 180 }}
+        transition={{ type: "spring", bounce: 0.25 ,stiffness: 50, velocity: 2}}
+        style={{backgroundColor: 'blue', width: '300px' , height: '300px' }}
+      />
+  <CustomCard
+  image="/img/logo.png"
+  title="Card Title"
+  description="This is a card description."
+/>
     </div>
   );
 }
