@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import './App.css';
 import CustomCard from './Crad';
 import ReactPlayer from 'react-player'
-
+import ThemeWrapper from './ThemeWrapper'
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
       />
 
       <div id='container'>
+      <ThemeWrapper  children={<div>test</div>} />
         <motion.div
           animate={{ rotate: 180 }}
           transition={{ type: "spring", bounce: 0.25, stiffness: 50, velocity: 2 }}
@@ -43,6 +44,7 @@ function App() {
             description="This is a card description."
           />
         </motion.div>
+     
       </div>
     </div>
   );
