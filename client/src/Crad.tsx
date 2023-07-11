@@ -18,10 +18,10 @@ const CustomCard: React.FC<CardProps> = ({ image, title, description }) => (
     <Image src={image} />
     <Box px={2}>
       <Heading as='h3'>
-        Card Demo
+      {title}
       </Heading>
       <Text fontSize={0}>
-        You can edit this code
+       {description}
       </Text>
     </Box>
   </Card>
