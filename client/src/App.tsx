@@ -50,7 +50,7 @@ function App() {
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
           >
             <Box>
-        <Text fontSize={"32px"}> This is Me ✨</Text>
+        <Text fontSize={"55px"}> This is Me ✨</Text>
             </Box>
             </motion.div>
             <motion.div
