@@ -5,11 +5,11 @@ import CustomCard from './components/Crad';
 import ProjectPage from './components/projectPage'
 import MainPage from './components/mainPage'
 import { Link } from "react-router-dom";
-import { Box, Card, Image, Heading, Text, Flex } from 'rebass';
+import {  Text, Flex } from 'rebass';
 import { FaGithub } from "react-icons/fa";
 import { Route, Routes } from "react-router-dom";
 import {
-  
+  Box,
   useColorMode,
   IconButton,
   Button,
@@ -43,37 +43,45 @@ function App() {
 
   return (
     <div className="App">
-
-
-
       <div id="container">
         <header>
           <motion.div
             animate={{ x: [400, 200, 0] }}
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
           >
-            <h1>This is Me ✨</h1>
-          </motion.div>
-        </header>
-        <div className='mainLayou'>
-          <ProjectPage />
-        </div >
-        <footer>
-          <Link to={"https://github.com/KwonYeJun"}>
+            <Box>
+        <Text fontSize={"32px"}> This is Me ✨</Text>
+            </Box>
+            </motion.div>
+            <motion.div
+            animate={{ x: [-400, -200, 0] }}
+            transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
+          >
+            <Link to={"https://github.com/KwonYeJun"}>
             <Button colorScheme="gray" leftIcon={<FaGithub />}>
               KwonYeJun
             </Button>
           </Link>
+          </motion.div>
+        </header>
+        <div className='mainLayou'>
+          <ProjectPage />
+        
+        </div >
+        <footer>
           <IconButton
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
             width={"100%"}
-            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            icon={colorMode === "light" ?  <MoonIcon /> : <SunIcon />}
             onClick={toggleColorMode}
             aria-label="Toggle color mode"
             variant="ghost"
-          />
+          >
+            White Mode & black Mode
+
+          </IconButton>
         </footer>
 
       </div>
