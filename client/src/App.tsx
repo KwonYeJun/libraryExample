@@ -1,92 +1,45 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion'
 import './App.css';
 import CustomCard from './Crad';
-import ReactPlayer from 'react-player'
-import { Box } from './ThemeWrapper'
-import { Scene } from './scene'
-import {Example} from './Example'
+import ProjectPage from './projectPage'
+
+
 
 function App() {
+  const scrollRef = useRef(null);
+  const emojiVariants = {
+    hidden: { opacity: 0, y: 100, rotateY: 300 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      rotateY: 0,
+      transition: {
+        rotateY: {
+          duration: 0.3
+        },
+        y: {
+          type: "spring",
+          damping: 3,
+          stiffness: 50,
+          restDelta: 0.01,
+          duration: 0.3
+        }
+      }
+    }
+  };
 
 
   return (
+
     <div className="App">
 
-      <div id='container'>
-        {/* <motion.a
-          animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0] }}
-          className="box"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
-        >
-          <CustomCard
-            image="/img/logo.png"
-            title="Card Title"
-            description="This is a card description."
-            color="blue"
-          />
-        </motion.a>
-        <motion.a
-          animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0], y: [-400, -200, 0], z: [-400, -200, 0] }}
-          className="box"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
-        >
-          <CustomCard
-            image="/img/logo.png"
-            title="Card Title"
-            description="This is a card description."
-            color="green"
-          />
-        </motion.a>
-        <motion.a
-          animate={{ rotate: [180, 120, 60, 0], x: [400, 200, 0], y: [400, 200, 0], z: [400, 200, 0] }}
-          className="box"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2, }}
-        >
-          <CustomCard
-            image="/img/logo.png"
-            title="Card Title"
-            description="This is a card description."
-            color="yellow"
-          />
-        </motion.a>
-        <motion.a
-          animate={{ rotate: [180, 120, 60, 0], x: [400, 200, 0] }}
-          className="box"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
-        >
-          <CustomCard
-            image="/img/logo.png"
-            title="Card Title"
-            description="This is a card description."
-            color="pink"
-          />
-        </motion.a> */}
-<Example />
 
-
-        {/* <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ type: "spring", bounce: 0.25, stiffness: 50, velocity: 2 }}
-          drag
-          dragSnapToOrigin
-          dragConstraints={{ left: 0, right: 200, top: -200, bottom: 200 }}
-          dragElastic={0.2}
-        >
-          <CustomCard
-
-            image="/img/logo.png"
-            title="Card Title"
-            description="This is a card description."
-            color="green"
-          />
-        </motion.div> */}
-
-        <Box />
+      <h1>This is Me ✨</h1>
+      <div id="container" ref={scrollRef}>
+    
+        <ProjectPage />
+    
       </div>
     </div>
   );
