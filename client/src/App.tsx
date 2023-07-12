@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import './App.css';
-import CustomCard from './Crad';
-import ProjectPage from './projectPage'
-import MainPage from './mainPage'
+import CustomCard from './components/Crad';
+import ProjectPage from './components/projectPage'
+import MainPage from './components/mainPage'
 import { Link } from "react-router-dom";
 import { Box, Card, Image, Heading, Text, Flex } from 'rebass';
 import { FaGithub } from "react-icons/fa";
+import { Route, Routes } from "react-router-dom";
 import {
+  
   useColorMode,
   IconButton,
   Button,
@@ -53,12 +55,15 @@ function App() {
             <h1>This is Me ✨</h1>
           </motion.div>
         </header>
-        <main><ProjectPage /></main>
-        <footer>   <Link to={"https://github.com/KwonYeJun"}>
-          <Button colorScheme="gray" leftIcon={<FaGithub />}>
-            KwonYeJun
-          </Button>
-        </Link>
+        <div className='mainLayou'>
+          <ProjectPage />
+        </div >
+        <footer>
+          <Link to={"https://github.com/KwonYeJun"}>
+            <Button colorScheme="gray" leftIcon={<FaGithub />}>
+              KwonYeJun
+            </Button>
+          </Link>
           <IconButton
             display={"flex"}
             justifyContent={"center"}

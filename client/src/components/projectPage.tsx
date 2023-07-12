@@ -8,9 +8,7 @@ function ProjectPage() {
 
   return (
     <>
-   
-
-        <motion.a
+        <motion.div
           animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0] }}
           className="box"
           whileHover={{ scale: 1.3 }}
@@ -22,8 +20,8 @@ function ProjectPage() {
             description="This is a card description."
             color="#FFD13D"
           />
-        </motion.a>
-        <motion.a
+        </motion.div>
+        <motion.div
           animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0], y: [-400, -200, 0], z: [-400, -200, 0] }}
           className="box"
           whileHover={{ scale: 1.3 }}
@@ -35,8 +33,8 @@ function ProjectPage() {
             description="This is a card description."
             color="#71B8F5"
           />
-        </motion.a>
-        <motion.a
+        </motion.div>
+        <motion.div
           animate={{ rotate: [180, 120, 60, 0], x: [400, 200, 0], y: [400, 200, 0], z: [400, 200, 0] }}
           className="box"
           whileHover={{ scale: 1.3 }}
@@ -48,8 +46,8 @@ function ProjectPage() {
             description="This is a card description."
             color="#FA8737"
           />
-        </motion.a>
-        <motion.a
+        </motion.div>
+        <motion.div
           animate={{ rotate: [180, 120, 60, 0], x: [400, 200, 0] }}
           className="box"
           whileHover={{ scale: 1.3 }}
@@ -61,8 +59,7 @@ function ProjectPage() {
             description="This is a card description."
             color="#CE5BDE"
           />
-        </motion.a>
-       
+        </motion.div>
    
     </>
   );

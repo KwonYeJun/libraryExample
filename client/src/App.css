@@ -16,7 +16,7 @@ header{
   align-items: center;
   justify-content: center;
 }
-main{
+.mainLayou{
   width: 100vw;
   height: 60vh;
   display: flex;
