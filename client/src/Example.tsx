@@ -2,24 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
-import CustomCard from './Crad';
-// const image: React.ReactNode[] = [
-//   <motion.a
-//     key="card1"
-//     animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0], y: [-400, -200, 0], z: [-400, -200, 0] }}
-//     className="box"
-//     whileHover={{ scale: 1.1 }}
-//     transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
-//   >
-//     <CustomCard
-//       image="/img/logo.png"
-//       title="Card Title"
-//       description="This is a card description."
-//       color="green"
-//     />
-//   </motion.a>,
-//   // 다른 컴포넌트들을 여기에 추가할 수 있음
-// ];
+import { images } from "./image-data";
 
 const variants = {
   enter: (direction: number) => {
