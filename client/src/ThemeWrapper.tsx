@@ -1,23 +1,15 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useMotionValue, useTransform } from "framer-motion"
+import { motion } from "framer-motion-3d"
 
-interface ToggleContentProps {
-  header: string;
-  content: JSX.Element;
-}
-
-const ToggleContent: React.FC<ToggleContentProps> = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export function Box() {
+  const x = useMotionValue(0)
+  const scaleZ = useTransform(x, v => v / 100)
   
   return (
-    <motion.div
-      layout
-      onClick={() => setIsOpen(!isOpen)}
-    >
-      <motion.h2 layout></motion.h2>
-      {isOpen ? 'test' : null}
-    </motion.div>
-  );
-};
-
-export default ToggleContent;
+    <motion.mesh
+      position-x={x}
+      scale={[1, 1, scaleZ]}
+      animate={{ x: 100 }} 
+    />
+  )
+}
