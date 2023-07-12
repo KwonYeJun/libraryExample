@@ -1,45 +1,39 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import './App.css';
 import CustomCard from './Crad';
 import ProjectPage from './projectPage'
-
-
+import MainPage from './mainPage'
 
 function App() {
-  const scrollRef = useRef(null);
-  const emojiVariants = {
-    hidden: { opacity: 0, y: 100, rotateY: 300 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      rotateY: 0,
-      transition: {
-        rotateY: {
-          duration: 0.3
-        },
-        y: {
-          type: "spring",
-          damping: 3,
-          stiffness: 50,
-          restDelta: 0.01,
-          duration: 0.3
-        }
-      }
-    }
-  };
+  const [showProjectPage, setShowProjectPage] = useState(false);
+  const [test, settest] = useState(false);
 
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    console.log('Scroll position:', scrollPosition);
+    if (scrollPosition > 0) {
+      setShowProjectPage(false);
+    } else{
+      settest(true);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-
     <div className="App">
-
-
       <h1>This is Me ✨</h1>
-      <div id="container" ref={scrollRef}>
-    
-        <ProjectPage />
-    
+      <div id="container">
+        {showProjectPage ? <ProjectPage /> : null}
+        {test ? <MainPage /> : null}
+
       </div>
     </div>
   );
