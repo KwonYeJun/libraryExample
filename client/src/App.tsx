@@ -4,22 +4,18 @@ import './App.css';
 import CustomCard from './Crad';
 import ReactPlayer from 'react-player'
 import { Box } from './ThemeWrapper'
-import {Scene} from './scene'
-
+import { Scene } from './scene'
+import {Example} from './Example'
 
 function App() {
 
 
-
-  
-
   return (
     <div className="App">
 
-
       <div id='container'>
-        <motion.a
-           animate={{ rotate: [-180,-120 ,-60 , 0] , x: [-400,-200,0]}}
+        {/* <motion.a
+          animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0] }}
           className="box"
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
@@ -32,7 +28,7 @@ function App() {
           />
         </motion.a>
         <motion.a
-           animate={{ rotate: [-180,-120 ,-60 , 0] , x: [-400,-200,0],y: [-400,-200,0],z: [-400,-200,0]}}
+          animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0], y: [-400, -200, 0], z: [-400, -200, 0] }}
           className="box"
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
@@ -45,7 +41,7 @@ function App() {
           />
         </motion.a>
         <motion.a
-           animate={{ rotate: [180,120 ,60 , 0] , x: [400,200,0]  ,y: [400,200,0],z: [400,200,0]}}
+          animate={{ rotate: [180, 120, 60, 0], x: [400, 200, 0], y: [400, 200, 0], z: [400, 200, 0] }}
           className="box"
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2, }}
@@ -58,7 +54,7 @@ function App() {
           />
         </motion.a>
         <motion.a
-           animate={{ rotate: [180,120 ,60 ,0]  , x: [400,200,0]}}
+          animate={{ rotate: [180, 120, 60, 0], x: [400, 200, 0] }}
           className="box"
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
@@ -69,9 +65,8 @@ function App() {
             description="This is a card description."
             color="pink"
           />
-        </motion.a>
-
- 
+        </motion.a> */}
+<Example />
 
 
         {/* <motion.div
@@ -90,7 +85,7 @@ function App() {
             color="green"
           />
         </motion.div> */}
-        
+
         <Box />
       </div>
     </div>
