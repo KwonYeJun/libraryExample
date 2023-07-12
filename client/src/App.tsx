@@ -4,10 +4,15 @@ import './App.css';
 import CustomCard from './Crad';
 import ReactPlayer from 'react-player'
 import { Box } from './ThemeWrapper'
-
+import {Scene} from './scene'
 
 
 function App() {
+
+
+
+  
+
   return (
     <div className="App">
 
@@ -17,7 +22,7 @@ function App() {
            animate={{ rotate: [-180,-120 ,-60 , 0] , x: [-400,-200,0]}}
           className="box"
           whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 40, damping: 10, velocity: 2 }}
+          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
         >
           <CustomCard
             image="/img/logo.png"
@@ -27,10 +32,10 @@ function App() {
           />
         </motion.a>
         <motion.a
-           animate={{ rotate: [-180,-120 ,-60 , 0] , x: [-400,-200,0]}}
+           animate={{ rotate: [-180,-120 ,-60 , 0] , x: [-400,-200,0],y: [-400,-200,0],z: [-400,-200,0]}}
           className="box"
           whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 40, damping: 10, velocity: 2 }}
+          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
         >
           <CustomCard
             image="/img/logo.png"
@@ -43,7 +48,7 @@ function App() {
            animate={{ rotate: [180,120 ,60 , 0] , x: [400,200,0]  ,y: [400,200,0],z: [400,200,0]}}
           className="box"
           whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 40, damping: 10, velocity: 2 }}
+          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2, }}
         >
           <CustomCard
             image="/img/logo.png"
@@ -56,7 +61,7 @@ function App() {
            animate={{ rotate: [180,120 ,60 ,0]  , x: [400,200,0]}}
           className="box"
           whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 40, damping: 10, velocity: 2 }}
+          transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
         >
           <CustomCard
             image="/img/logo.png"
@@ -66,7 +71,7 @@ function App() {
           />
         </motion.a>
 
-
+ 
 
 
         {/* <motion.div
