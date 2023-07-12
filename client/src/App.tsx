@@ -40,7 +40,7 @@ function App() {
           />
         </motion.a>
         <motion.a
-           animate={{ rotate: [180,120 ,60 , 0] , x: [400,200,0]}}
+           animate={{ rotate: [180,120 ,60 , 0] , x: [400,200,0]  ,y: [400,200,0],z: [400,200,0]}}
           className="box"
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 40, damping: 10, velocity: 2 }}

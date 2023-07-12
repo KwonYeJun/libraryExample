@@ -9,7 +9,7 @@ interface CardProps {
 }
 
 const CustomCard: React.FC<CardProps> = ({ image, title, description ,color}) => (
-  <Box width={256} style={{display: 'flex'    , flexDirection: "column"}}>
+  <Box width={256} style={{display: 'flex' , flexDirection: "column"}}>
   <Image src={image} style={{height: '150px' ,width: '150px',  marginBottom:" -30px" , zIndex: "2"}} />
   <Card
     sx={{
