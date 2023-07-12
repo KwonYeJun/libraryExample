@@ -5,23 +5,28 @@ interface CardProps {
   image: string;
   title: string;
   description: string;
+  color:string;
 }
 
-const CustomCard: React.FC<CardProps> = ({ image, title, description }) => (
-  <Box width={256}>
+const CustomCard: React.FC<CardProps> = ({ image, title, description ,color}) => (
+  <Box width={256} style={{display: 'flex'    , flexDirection: "column"}}>
+  <Image src={image} style={{height: '150px' ,width: '150px',  marginBottom:" -30px" , zIndex: "2"}} />
   <Card
     sx={{
-      p: 10, // 테두리 라고 생각 하면 될것 같다.
-      borderRadius: 2,
+      p: 10,
+      borderRadius: 5,
       boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
-    }}>
-    <Image src={image} />
-    <Box px={2}>
+      background: `linear-gradient(to right,${color}, #FFFFFF)`
+      // backgroundColor:`${color}`
+    }}
+ style={{  width: '100%'}}
+    >
+    <Box px={2} pt={5}>
       <Heading as='h3'>
-      {title}
+        {title}
       </Heading>
       <Text fontSize={0}>
-       {description}
+        {description}
       </Text>
     </Box>
   </Card>

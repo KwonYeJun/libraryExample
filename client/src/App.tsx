@@ -3,26 +3,14 @@ import { motion } from 'framer-motion'
 import './App.css';
 import CustomCard from './Crad';
 import ReactPlayer from 'react-player'
-import {Box} from './ThemeWrapper'
+import { Box } from './ThemeWrapper'
 
 
 
 function App() {
   return (
     <div className="App">
-      <ReactPlayer
-        url={"../videos/test.mp4"}
-        width="1920px"
-        height="1080px"
-        loop={true}
-        playing={true}
-        muted={true}
-        controls={false}
-        style={{
-          position: 'absolute', zIndex: -1, pointerEvents: 'none', filter: "blur(2.5px)", backgroundSize: "cover"
-          , backgroundPosition: "center"
-        }}
-      />
+
 
       <div id='container'>
         <motion.div
@@ -33,35 +21,38 @@ function App() {
           dragElastic={0.2}
           style={{ backgroundColor: 'blue', width: '300px', height: '300px' }}
         />
-        <motion.div onHoverStart={() => console.log('Hover starts')} style={{ backgroundColor: 'pink', width: '300px', height: '300px' }} />
-        <motion.div
-          className="box"
-          whileHover={{ scale: 1.1 , rotate: -30}}
-          transition={{ type: "spring", stiffness: 40, damping: 10 , velocity: 2}}
-     
-        >
-            <CustomCard
-            image="/img/logo.png"
-            title="Card Title"
-            description="This is a card description."
-          />
-          </motion.div>
 
         <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ type: "spring", bounce: 0.25, stiffness: 50, velocity: 2 }}
-          drag
-          dragSnapToOrigin 
-          dragConstraints={{ left: 0, right: 200, top: -200, bottom: 200 }}
-          dragElastic={0.2}
+           animate={{ rotate: [-180,-120 ,-60 , 0] , x: [-400,-200,0]}}
+          className="box"
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 40, damping: 10, velocity: 2 }}
         >
           <CustomCard
             image="/img/logo.png"
             title="Card Title"
             description="This is a card description."
+            color="blue"
           />
         </motion.div>
-<Box />
+
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ type: "spring", bounce: 0.25, stiffness: 50, velocity: 2 }}
+          drag
+          dragSnapToOrigin
+          dragConstraints={{ left: 0, right: 200, top: -200, bottom: 200 }}
+          dragElastic={0.2}
+        >
+          <CustomCard
+
+            image="/img/logo.png"
+            title="Card Title"
+            description="This is a card description."
+            color="green"
+          />
+        </motion.div>
+        <Box />
       </div>
     </div>
   );
