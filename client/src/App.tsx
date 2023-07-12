@@ -4,6 +4,15 @@ import './App.css';
 import CustomCard from './Crad';
 import ProjectPage from './projectPage'
 import MainPage from './mainPage'
+import { Link } from "react-router-dom";
+import { Box, Card, Image, Heading, Text, Flex } from 'rebass';
+import { FaGithub } from "react-icons/fa";
+import {
+  useColorMode,
+  IconButton,
+  Button,
+} from "@chakra-ui/react";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 function App() {
   const [showProjectPage, setShowProjectPage] = useState(false);
@@ -15,7 +24,7 @@ function App() {
     console.log('Scroll position:', scrollPosition);
     if (scrollPosition > 0) {
       setShowProjectPage(false);
-    } else{
+    } else {
       settest(true);
     }
   }
@@ -26,13 +35,41 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  const backgroundColor = colorMode === "light" ? "Dark" : "Light";
 
   return (
     <div className="App">
-      <h1>This is Me ✨</h1>
+
+
+
       <div id="container">
-        {showProjectPage ? <ProjectPage /> : null}
-        {test ? <MainPage /> : null}
+        <header>
+          <motion.div
+            animate={{ x: [400, 200, 0] }}
+            transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
+          >
+            <h1>This is Me ✨</h1>
+          </motion.div>
+        </header>
+        <main><ProjectPage /></main>
+        <footer>   <Link to={"https://github.com/KwonYeJun"}>
+          <Button colorScheme="gray" leftIcon={<FaGithub />}>
+            KwonYeJun
+          </Button>
+        </Link>
+          <IconButton
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            width={"100%"}
+            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            onClick={toggleColorMode}
+            aria-label="Toggle color mode"
+            variant="ghost"
+          />
+        </footer>
 
       </div>
     </div>

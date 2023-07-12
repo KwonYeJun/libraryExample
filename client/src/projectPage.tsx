@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import CustomCard from './Crad';
 
-import { Box, Card, Image, Heading, Text, Flex } from 'rebass';
+
 
 function ProjectPage() {
 
