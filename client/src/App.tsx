@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import {  Text, Flex } from 'rebass';
 import { FaGithub } from "react-icons/fa";
 
+
 import {
   Box,
   useColorMode,
@@ -18,6 +19,7 @@ import { SunIcon, MoonIcon , ArrowRightIcon ,ArrowLeftIcon} from "@chakra-ui/ico
 function App() {
 
   const { colorMode, toggleColorMode } = useColorMode();
+
   const backgroundColor = colorMode === "light" ? "Dark" : "#E1E1E1";
   const [isComponentVisible, setComponentVisible] = useState(false);
 
@@ -34,7 +36,8 @@ function App() {
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
           >
             <Box>
-        <Text fontSize={"55px"} color={backgroundColor}> This is Me ✨</Text>
+        <Text fontSize={"55px"} color={backgroundColor}> 
+        {isComponentVisible === true ? "⚒️ Project ✏" : "👋 This is Me ✨"} </Text>
             </Box>
             </motion.div>
             <motion.div
@@ -56,21 +59,19 @@ function App() {
             justifyContent={"center"}
             alignItems={"center"}
             width={"100%"}
-            icon={isComponentVisible === true ? <ArrowRightIcon /> : <ArrowLeftIcon />}
+            color={backgroundColor}
+            icon={isComponentVisible === true ? <ArrowLeftIcon /> : <ArrowRightIcon />}
             onClick={handleClick}
             aria-label="change components"
             variant="ghost"
           >
-            {/* {!isComponentVisible &&   "Project "}
-            {isComponentVisible &&   "Profile "} */}
           </IconButton>
           
           </motion.div>
         </header>
         <div className='mainLayou'>
-        {!isComponentVisible &&  <MainPage  /> }
+        {!isComponentVisible &&  <MainPage /> }
         {isComponentVisible &&  <ProjectPage /> }
-          {/* <ProjectPage /> */}
         
         </div >
         <footer>

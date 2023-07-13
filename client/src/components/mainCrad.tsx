@@ -18,11 +18,11 @@ const MainCrad: React.FC<CardProps> = ({ image, title, description, color }) => 
         borderRadius: 5,
         boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
         // backgroundImage: `linear-gradient(to right, ${color}, #FFFFFF), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px, transparent 20px, transparent 30px)` 
-        background: `linear-gradient(to right,${color}, #FFFFFF)`
+        background: `${color}`
         // backgroundColor:`${color}`
       }}
 
-      style={{ width: '300%', height: "45vh" }}
+      style={{ width: '280%', height: "40vh" }}
     >
       <Box px={2} pt={5}>
         <Heading as='h3'>

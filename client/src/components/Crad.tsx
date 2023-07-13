@@ -11,7 +11,7 @@ interface CardProps {
 
 const CustomCard: React.FC<CardProps> = ({ image, title, description, color }) => (
 
-  
+
   <Box width={256} style={{ display: 'flex', flexDirection: "column", alignItems: "center" }}>
     <Image src={image} style={{ height: '150px', width: '150px', marginBottom: " -30px", zIndex: "2" }} />
     <Card
@@ -19,9 +19,9 @@ const CustomCard: React.FC<CardProps> = ({ image, title, description, color }) =
         p: 10,
         borderRadius: 5,
         boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
-        // backgroundImage: `linear-gradient(to right, ${color}, #FFFFFF), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px, transparent 20px, transparent 30px)` 
-        background: `linear-gradient(to right,${color}, #FFFFFF)`
-        // backgroundColor:`${color}`
+        backgroundColor: `${color}`
+        // background: `linear-gradient(-65deg,${color}, #E1E1E1)`
+
       }}
 
       style={{ width: '130%', height: "30vh" }}

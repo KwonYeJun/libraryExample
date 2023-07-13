@@ -58,6 +58,7 @@ footer{
   font-family: 'Hi Melody', cursive;
   font-size: 1.2vw; /* 부모 요소 너비의 2%에 해당하는 폰트 크기 */
   white-space: pre-line;
+  font-weight:bold;
 }
 
 .textH1 {
