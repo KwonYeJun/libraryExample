@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import './App.css';
-import CustomCard from './components/Crad';
 import ProjectPage from './components/projectPage'
 import MainPage from './components/mainPage'
 import { Link } from "react-router-dom";
 import {  Text, Flex } from 'rebass';
 import { FaGithub } from "react-icons/fa";
-import { Route, Routes } from "react-router-dom";
 
 import {
   Box,
@@ -20,8 +18,7 @@ import { SunIcon, MoonIcon , ArrowRightIcon ,ArrowLeftIcon} from "@chakra-ui/ico
 function App() {
 
   const { colorMode, toggleColorMode } = useColorMode();
-
-  const backgroundColor = colorMode === "light" ? "Dark" : "Light";
+  const backgroundColor = colorMode === "light" ? "Dark" : "#E1E1E1";
   const [isComponentVisible, setComponentVisible] = useState(false);
 
   const handleClick = () => {
@@ -37,7 +34,7 @@ function App() {
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
           >
             <Box>
-        <Text fontSize={"55px"}> This is Me ✨</Text>
+        <Text fontSize={"55px"} color={backgroundColor}> This is Me ✨</Text>
             </Box>
             </motion.div>
             <motion.div
@@ -45,7 +42,7 @@ function App() {
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
           >
             <Link to="https://github.com/KwonYeJun" target="_blank" rel="noopener noreferrer">
-            <Button colorScheme="gray" leftIcon={<FaGithub />}>
+            <Button colorScheme="gray" leftIcon={<FaGithub />} color={backgroundColor}>
               KwonYeJun
             </Button>
           </Link>
@@ -71,7 +68,7 @@ function App() {
           </motion.div>
         </header>
         <div className='mainLayou'>
-        {!isComponentVisible &&  <MainPage /> }
+        {!isComponentVisible &&  <MainPage  /> }
         {isComponentVisible &&  <ProjectPage /> }
           {/* <ProjectPage /> */}
         
@@ -87,8 +84,6 @@ function App() {
             aria-label="Toggle color mode"
             variant="ghost"
           >
-            White Mode & black Mode
-
           </IconButton>
         </footer>
 

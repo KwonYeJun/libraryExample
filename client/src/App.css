@@ -26,7 +26,7 @@ header{
 }
 .mainLayou{
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -41,7 +41,7 @@ header{
 }
 footer{
   width: 100vw;
-  height: 20vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,4 +50,22 @@ footer{
   height: 100vh;
   width: 100vw;
 
+}
+
+
+.textchild {
+
+  font-family: 'Hi Melody', cursive;
+  font-size: 1.2vw; /* 부모 요소 너비의 2%에 해당하는 폰트 크기 */
+  white-space: pre-line;
+}
+
+.textH1 {
+
+  font-family: 'Hi Melody', cursive;
+  white-space: pre-line;
+  width: 100%;
+  height: 20%;
+  font-size: 50px;
+  text-align: center;
 }

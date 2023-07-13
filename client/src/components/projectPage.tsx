@@ -31,8 +31,9 @@ function ProjectPage() {
       >
         <CustomCard
           image="/img/stock.png"
-          title="Card Title"
-          description="This is a card description."
+          title="StockTogether"
+          description="stock(주식) + together(함께) 라는 의미로
+          주식 매매를 개인 단위가 아닌 팀 단위로 함께 할 수 있는 서비스"
           color="#71B8F5"
         />
       </motion.div>
@@ -44,8 +45,8 @@ function ProjectPage() {
       >
         <CustomCard
           image="/img/bts.png"
-          title="Card Title"
-          description="This is a card description."
+          title="BTS"
+          description="(Bus Tracker Service)사용자가 궁금한 정류장의 대전 버스를 실시간으로 확인 하여 버스를 놓치는 경우의 수를 줄이자."
           color="#FA8737"
         />
       </motion.div>
@@ -58,7 +59,7 @@ function ProjectPage() {
         <CustomCard
           image="/img/monkey.png"
           title="Card Title"
-          description="This is a card description."
+          description="여러가지 축이 어떤 소리를 내는지 간접적으로나마 알 수 있는 사이트를 만들어보면 어떨까 생각했다."
           color="#CE5BDE"
         />
       </motion.div>

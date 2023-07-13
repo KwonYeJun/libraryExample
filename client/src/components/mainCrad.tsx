@@ -9,11 +9,9 @@ interface CardProps {
   color: string;
 }
 
-const CustomCard: React.FC<CardProps> = ({ image, title, description, color }) => (
-
-  
+const MainCrad: React.FC<CardProps> = ({ image, title, description, color }) => (
   <Box width={256} style={{ display: 'flex', flexDirection: "column", alignItems: "center" }}>
-    <Image src={image} style={{ height: '150px', width: '150px', marginBottom: " -30px", zIndex: "2" }} />
+    <Image src={image} style={{ height: '200px', width: '400px', marginBottom: " -30px", zIndex: "2" }} />
     <Card
       sx={{
         p: 10,
@@ -24,7 +22,7 @@ const CustomCard: React.FC<CardProps> = ({ image, title, description, color }) =
         // backgroundColor:`${color}`
       }}
 
-      style={{ width: '130%', height: "30vh" }}
+      style={{ width: '300%', height: "45vh" }}
     >
       <Box px={2} pt={5}>
         <Heading as='h3'>
@@ -51,4 +49,4 @@ const CustomCard: React.FC<CardProps> = ({ image, title, description, color }) =
 
 );
 
-export default CustomCard;
+export default MainCrad;
