@@ -17,29 +17,32 @@ import {
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 function App() {
-  const [showProjectPage, setShowProjectPage] = useState(false);
-  const [test, settest] = useState(false);
+  // const [showProjectPage, setShowProjectPage] = useState(false);
 
+  // const handleScroll = () => {
+  //   const scrollPosition = window.scrollY;
+  //   console.log('Scroll position:', scrollPosition);
+  //   if (scrollPosition > 0) {
+  //     setShowProjectPage(false);
+  //   } else {
+  //     settest(true);
+  //   }
+  // }
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    console.log('Scroll position:', scrollPosition);
-    if (scrollPosition > 0) {
-      setShowProjectPage(false);
-    } else {
-      settest(true);
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
   const { colorMode, toggleColorMode } = useColorMode();
 
   const backgroundColor = colorMode === "light" ? "Dark" : "Light";
+  const [isComponentVisible, setComponentVisible] = useState(false);
+
+  const handleClick = () => {
+    setComponentVisible(!isComponentVisible);
+  };
 
   return (
     <div className="App">
@@ -63,9 +66,20 @@ function App() {
             </Button>
           </Link>
           </motion.div>
+          <motion.div
+            animate={{ x: [-400, -200, 0] }}
+            transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
+          >
+            <Button colorScheme="gray" onClick={handleClick}>
+            {!isComponentVisible &&   "Project ?? >>"}
+            {isComponentVisible &&   "Profile ?? <<"}
+            </Button>
+          </motion.div>
         </header>
         <div className='mainLayou'>
-          <ProjectPage />
+        {!isComponentVisible &&  <MainPage /> }
+        {isComponentVisible &&  <ProjectPage /> }
+          {/* <ProjectPage /> */}
         
         </div >
         <footer>
