@@ -8,33 +8,17 @@ import { Link } from "react-router-dom";
 import {  Text, Flex } from 'rebass';
 import { FaGithub } from "react-icons/fa";
 import { Route, Routes } from "react-router-dom";
+
 import {
   Box,
   useColorMode,
   IconButton,
   Button,
 } from "@chakra-ui/react";
-import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+import { SunIcon, MoonIcon , ArrowRightIcon ,ArrowLeftIcon} from "@chakra-ui/icons";
 
 function App() {
-  // const [showProjectPage, setShowProjectPage] = useState(false);
 
-  // const handleScroll = () => {
-  //   const scrollPosition = window.scrollY;
-  //   console.log('Scroll position:', scrollPosition);
-  //   if (scrollPosition > 0) {
-  //     setShowProjectPage(false);
-  //   } else {
-  //     settest(true);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
   const { colorMode, toggleColorMode } = useColorMode();
 
   const backgroundColor = colorMode === "light" ? "Dark" : "Light";
@@ -70,10 +54,20 @@ function App() {
             animate={{ x: [-400, -200, 0] }}
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
           >
-            <Button colorScheme="gray" onClick={handleClick}>
-            {!isComponentVisible &&   "Project ?? >>"}
-            {isComponentVisible &&   "Profile ?? <<"}
-            </Button>
+              <IconButton
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            width={"100%"}
+            icon={isComponentVisible === true ? <ArrowRightIcon /> : <ArrowLeftIcon />}
+            onClick={handleClick}
+            aria-label="change components"
+            variant="ghost"
+          >
+            {/* {!isComponentVisible &&   "Project "}
+            {isComponentVisible &&   "Profile "} */}
+          </IconButton>
+          
           </motion.div>
         </header>
         <div className='mainLayou'>
