@@ -16,9 +16,11 @@ function ProjectPage() {
       >
         <CustomCard
           image="/img/poke.png"
-          title="Card Title"
-          description="This is a card description."
+          title="Poke X Dige"
+          description="포켓몬과 디지몬을 동시에 즐길 수 있는 
+          멀티버스 커뮤니케이션 게임"
           color="#FFD13D"
+       
         />
       </motion.div>
       <motion.div

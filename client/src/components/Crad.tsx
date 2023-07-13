@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Card, Image, Heading, Text } from 'rebass';
 
+import { motion } from 'framer-motion'
 interface CardProps {
   image: string;
   title: string;
@@ -21,14 +22,22 @@ const CustomCard: React.FC<CardProps> = ({ image, title, description ,color}) =>
       // backgroundColor:`${color}`
     }}
    
- style={{  width: '100%',height: "40vh"}}
+ style={{  width: '130%',height: "30vh"}}
     >
     <Box px={2} pt={5}>
       <Heading as='h3'>
         {title}
       </Heading>
       <Text fontSize={0}>
-        {description}
+      <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1.5 }}
+        >
+        <div className="textH1 ">{description}</div>
+        </motion.div>
+        
       </Text>
     </Box>
   </Card>

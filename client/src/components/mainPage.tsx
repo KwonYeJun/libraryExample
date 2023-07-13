@@ -8,8 +8,8 @@ function MainPage() {
 
   return (
     <>
-      <motion.div
-        animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0] }}
+         <motion.div
+        animate={{  y: [-400, -200, 0] }}
         className="box"
         whileHover={{ scale: 1.3 }}
         transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
@@ -23,7 +23,7 @@ function MainPage() {
       </motion.div>
 
       <motion.div
-        animate={{ rotate: [-180, -120, -60, 0], x: [-400, -200, 0] }}
+        animate={{  y: [-400, -200, 0] }}
         className="box"
         whileHover={{ scale: 1.3 }}
         transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
@@ -35,7 +35,7 @@ function MainPage() {
           color="#5BDE5D"
         />
       </motion.div>
-
+        
     </>
   );
 }
