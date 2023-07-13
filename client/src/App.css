@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+body::-webkit-scrollbar {
+  display: none;
+  overflow-y: scroll;
+  overflow-x: scroll;
+
+}
+
 #container {
  
   width: 100vw;
@@ -23,6 +30,13 @@ header{
   align-items: center;
   justify-content: space-evenly;
   gap: 100px;
+  overflow-x: scroll;
+  white-space: nowrap;
+
+}
+.mainLayou::-webkit-scrollbar {
+  display: none;
+
 }
 footer{
   width: 100vw;
