@@ -60,7 +60,7 @@ function App() {
             animate={{ x: [-400, -200, 0] }}
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
           >
-            <Link to={"https://github.com/KwonYeJun"}>
+            <Link to="https://github.com/KwonYeJun" target="_blank" rel="noopener noreferrer">
             <Button colorScheme="gray" leftIcon={<FaGithub />}>
               KwonYeJun
             </Button>
