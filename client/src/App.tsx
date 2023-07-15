@@ -6,7 +6,7 @@ import MainPage from './components/mainPage'
 import { Link } from "react-router-dom";
 import {  Text, Flex } from 'rebass';
 import { FaGithub } from "react-icons/fa";
-
+import Juni from './juni'
 
 import {
   Box,
@@ -31,6 +31,7 @@ function App() {
     <div className="App">
       <div id="container">
         <header>
+        <Juni />
           <motion.div
             animate={{ x: [400, 200, 0] }}
             transition={{ type: "spring", stiffness: 20, damping: 10, velocity: 2 }}
@@ -49,6 +50,8 @@ function App() {
               KwonYeJun
             </Button>
           </Link>
+
+          
           </motion.div>
           <motion.div
             animate={{ x: [-400, -200, 0] }}
@@ -75,6 +78,8 @@ function App() {
         
         </div >
         <footer>
+ 
+
           <IconButton
             display={"flex"}
             justifyContent={"center"}
