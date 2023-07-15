@@ -17,9 +17,7 @@ const MainCrad: React.FC<CardProps> = ({ image, title, description, color }) => 
         p: 10,
         borderRadius: 5,
         boxShadow: '0 0 16px rgba(0, 0, 0, .25)',
-        // backgroundImage: `linear-gradient(to right, ${color}, #FFFFFF), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px, transparent 20px, transparent 30px)` 
         background: `${color}`
-        // backgroundColor:`${color}`
       }}
 
       style={{ width: '240%', height: "40vh" }}
