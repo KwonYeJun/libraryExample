@@ -24,11 +24,11 @@ const CustomCard: React.FC<CardProps> = ({ image, title, description, color }) =
 
       }}
 
-      style={{ width: '130%', height: "30vh" }}
+      style={{ width: '130%', height: "30vh"  ,paddingTop: "-20px"}}
     >
       <Box px={2} pt={5}>
         <Heading as='h3'>
-          <div className="textH1 ">
+          <div className="textH1 "    style={{ marginTop: "-30px"}}>
             {title}
           </div>
         </Heading>

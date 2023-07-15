@@ -22,11 +22,11 @@ const MainCrad: React.FC<CardProps> = ({ image, title, description, color }) => 
         // backgroundColor:`${color}`
       }}
 
-      style={{ width: '280%', height: "40vh" }}
+      style={{ width: '240%', height: "40vh" }}
     >
       <Box px={2} pt={5}>
         <Heading as='h3'>
-          <div className="textH1 ">
+          <div className="textH1 " style={{ marginTop: "-30px"}}>
             {title}
           </div>
         </Heading>
