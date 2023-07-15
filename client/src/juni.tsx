@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import lottie from 'lottie-web';
-import juni from './animation_lk2erqxh.json'
+import juni from './naver.json'
 
 const Juni = () => {
   // const juniRef = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ const [togle, setTogle] = useState(true);
 
 return(
   <>
-  <div id="juni" style={{width:"300px"}}></div>
+  <div id="juni" style={{width:"200px" ,height:"170px"}}></div>
   </>
 )
 
