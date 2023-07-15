@@ -38,7 +38,7 @@ function App() {
           >
             <Box>
         <Text fontSize={"55px"} color={backgroundColor}> 
-        {isComponentVisible === true ? "⚒️ Project ✏" : "👋 This is Me ✨"} </Text>
+        {isComponentVisible === true ? "⚒️ Project ✏" : " This is Me ✨"} </Text>
             </Box>
             </motion.div>
             <motion.div
