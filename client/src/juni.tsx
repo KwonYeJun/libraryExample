@@ -21,9 +21,13 @@ const [togle, setTogle] = useState(true);
     }
   },[juniTest]);
 
+  const handleClick = () => {
+    window.open('https://blog.naver.com/sag7002', '_blank');
+  };
+
 return(
   <>
-  <div id="juni" style={{width:"200px" ,height:"170px"}}></div>
+  <div id="juni" style={{width:"200px" ,height:"170px", cursor: "pointer"}} onClick={handleClick}></div>
   </>
 )
 
